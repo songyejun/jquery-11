@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>일회성 이벤트 만들기</title>
+<style type="text/css">
+img{ 
+   width: 140px; height: 120px;		
+}
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+$(function(){
+   //img요소를 클릭할 때 폭과 너비가 2배로 커지도록 구현하되, 클릭 기능이 한 번만 구현되도록 설정 
+  $("img").one("click", function(event){
+        var $tar = $(event.target);
+        $tar.width($tar.width()*2);
+        $tar.height($tar.height()*2);
+    });
+});
+</script>
+</head>
+<body>   
+   <img src="../images/banana.gif">
+</body>
+</html>
