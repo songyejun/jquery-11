@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>텍스트 슬라이더</title>
+    <style>
+        *{ margin: 0; padding: 0; }/*초기화 */
+        .wrap { width: 300px; height: 120px; overflow: hidden; margin-left: 60px; margin-top: 60px;}
+        li {height: 40px; line-height: 40px; margin-top: 0; padding-top: 0; padding-left: 40px;}
+        .lst { margin-top: 0; }
+        a { text-decoration: none; color: #333; }
+    </style>
+    <script src="https://code.jquery,com/jquery-latest.js"></script>
+    <script>
+    $(function(){
+        /* .lst의 margine-top 값을 -40px로 하는 애니메이트를 한 후
+        .lst의 첫 번빼 li요소를 맨 뒤로 보내고, .lst의 margin-top를 0으로 설정
+        */
+        var ht = parseInt($(".lst li").height()) * -1;
+    });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <ul class="lst">
+            <li><a href="">1글제목</a></li>
+            <li><a href="">2글제목</a></li>
+            <li><a href="">3글제목</a></li>
+            <li><a href="">4글제목</a></li>
+            <li><a href="">5글제목</a></li>
+            <li><a href="">6글제목</a></li>
+            <li><a href="">7글제목</a></li>
+            <li><a href="">8글제목</a></li>
+        </ul>
+    </div>
+    <button id></button>
+</body>
+</html>
